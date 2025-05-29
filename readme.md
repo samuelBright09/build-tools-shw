@@ -67,3 +67,16 @@ Uses:
 eslint-config-prettier
 
 eslint-plugin-import
+
+### Prettier Extension
+Used prettier Extension for all formatting 
+
+### Combined with:
+Linting: npm run lint
+
+## Available NPM Scripts
+Script	Description
+dev	Starts Webpack Dev Server
+build:	Builds the project for production
+lint:	Runs ESLint on all .ts/.js files
+test	Runs Jest tests
