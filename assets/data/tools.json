@@ -38,7 +38,7 @@
     "id": "grunt",
     "name": "Grunt",
     "description": "A JavaScript task runner that helps automate repetitive tasks in your workflow, like linting, compilation, and unit testing, using a plugin-based config.",
-    "logo": "",
+    "logo": "https://gruntjs.com/img/grunt-logo.png",
     "website": "https://gruntjs.com/"
   },
   {

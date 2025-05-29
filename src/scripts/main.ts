@@ -1,23 +1,29 @@
-// import moment from "moment";
+import moment from "moment";
 import "../../scss/style.scss";
 
-// const date = document.querySelector(".date");
-// if (date) {
-//     date.innerHTML = moment().format("dddd, MMMM Do, YYYY");
-// }
+const date = document.querySelector(".date");
+const toolsContainer: HTMLElement | null =
+document.querySelector(".tools-container");
+
+
+
 
 
 interface KTools {
-  id: string;
-  name: string;
-  description: string;
-  logo: string;
-  website: string;
+    id: string;
+    name: string;
+    description: string;
+    logo: string;
+    website: string;
 }
 
 
-const toolsContainer: HTMLElement | null =
-  document.querySelector(".tools-container");
+
+// DATE FROM MOMENT
+if (date) {
+    date.innerHTML = moment().format("dddd, MMMM Do, YYYY");
+}
+
 
   const toggleTheme = document.querySelector(".theme-toggle-and-dates button");
   if (toggleTheme) {
@@ -42,10 +48,11 @@ const renderTools = () : void => {
       let toolCard = "";
       toolsArray.forEach((tool) => {
         const { id, name, description, logo, website } = tool;
+        console.log(logo)
         toolCard += `<div class="tool">
           <div>
             <div class="img-container">
-              <img src=${logo} alt=${name} target="_blank" class=${id} />
+              <img src="${logo}" alt="${name}" target="_blank" class="${id}" />
             </div>
             <h4 class="tool-name">${name}</h4>
           </div>
