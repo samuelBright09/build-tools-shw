@@ -47,18 +47,16 @@ const renderTools = () : void => {
       toolsContainer.innerHTML = "";
       let toolCard = "";
       toolsArray.forEach((tool) => {
-        const { id, name, description, logo, website } = tool;
-        console.log(logo)
+        const {  name, description, website } = tool;
         toolCard += `<div class="tool">
           <div>
             <div class="img-container">
-              <img src="${logo}" alt="${name}" target="_blank" class="${id}" />
             </div>
             <h4 class="tool-name">${name}</h4>
           </div>
           <div class="tool-info">
             <p class="tool-description">${description}</p>
-            <a href=${website} class="tool-website">${name}</a>
+            <a href=${website} target="_blank" class="tool-website">${name}</a>
           </div>
         </div>`;
       });
