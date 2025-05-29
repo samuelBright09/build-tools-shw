@@ -1,0 +1,51 @@
+[
+  {
+    "id": "webpack",
+    "name": "Webpack",
+    "description": "A powerful and highly configurable module bundler for JavaScript applications. Webpack bundles assets, transforms code with loaders, and optimizes output for production.",
+    "logo": "",
+    "website": "https://webpack.js.org/"
+  },
+  {
+    "id": "vite",
+    "name": "Vite",
+    "description": "A modern frontend build tool that offers lightning-fast development with native ES modules and an optimized production build powered by Rollup.",
+    "logo": "",
+    "website": "https://vitejs.dev/"
+  },
+  {
+    "id": "parcel",
+    "name": "Parcel",
+    "description": "A zero-config bundler that automatically installs plugins and transforms your code with built-in support for many languages and file types.",
+    "logo": "",
+    "website": "https://parceljs.org/"
+  },
+  {
+    "id": "rollup",
+    "name": "Rollup",
+    "description": "An efficient JavaScript bundler designed for libraries and modern JavaScript projects. It produces smaller, faster code using ES module syntax.",
+    "logo": "",
+    "website": "https://rollupjs.org/"
+  },
+  {
+    "id": "gulp",
+    "name": "Gulp",
+    "description": "A streaming task runner that automates time-consuming development tasks such as minification, compilation, and live reloading via code-based pipelines.",
+    "logo": "",
+    "website": "https://gulpjs.com/"
+  },
+  {
+    "id": "grunt",
+    "name": "Grunt",
+    "description": "A JavaScript task runner that helps automate repetitive tasks in your workflow, like linting, compilation, and unit testing, using a plugin-based config.",
+    "logo": "",
+    "website": "https://gruntjs.com/"
+  },
+  {
+    "id": "snowpack",
+    "name": "Snowpack",
+    "description": "A lightning-fast frontend build tool designed for the modern web. It leverages JavaScript’s native module system and delivers instant builds and updates.",
+    "logo": "",
+    "website": "https://www.snowpack.dev/"
+  }
+]
