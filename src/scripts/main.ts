@@ -1,4 +1,5 @@
 // import moment from "moment";
+import "../../scss/style.scss";
 
 // const date = document.querySelector(".date");
 // if (date) {
