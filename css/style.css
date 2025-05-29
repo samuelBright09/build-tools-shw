@@ -1,0 +1,127 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+body.dark-theme {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+body.dark-theme header {
+  background-color: rgb(9.2589285714, 13.0714285714, 21.2410714286);
+}
+body.dark-theme .tool {
+  background-color: rgb(32.4821428571, 45.8571428571, 74.5178571429);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+body.dark-theme .tool .tool-website {
+  color: rgb(156.5219512195, 192.1951219512, 250.4780487805);
+}
+body.dark-theme .theme-toggle-and-dates button {
+  background-color: #4b5563;
+  color: white;
+}
+
+header {
+  padding: 1rem 2rem;
+  background-color: #1f2937;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+header .theme-toggle-and-dates {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header .theme-toggle-and-dates button {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+header .theme-toggle-and-dates button:hover {
+  background-color: rgb(11.1512195122, 99.1219512195, 242.8487804878);
+}
+header .date {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  width: 100%;
+}
+
+main {
+  padding: 2rem;
+}
+
+.tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tool {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tool:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.tool .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+.tool .img-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.tool .tool-name {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+.tool .tool-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.tool .tool-info .tool-description {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+.tool .tool-info .tool-website {
+  align-self: flex-start;
+  text-decoration: none;
+  font-weight: bold;
+  color: #3b82f6;
+  transition: all 0.3s ease;
+}
+.tool .tool-info .tool-website:hover {
+  text-decoration: underline;
+  color: rgb(11.1512195122, 99.1219512195, 242.8487804878);
+}
+
+/*# sourceMappingURL=style.css.map */

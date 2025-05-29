@@ -1,0 +1,156 @@
+@use "sass:color";
+
+// Variables
+$primary-color: #1f2937;
+$secondary-color: #4b5563;
+$accent-color: #3b82f6;
+$bg-light: #f9fafb;
+$bg-dark: #111827;
+$text-light: #f3f4f6;
+$text-dark: #1f2937;
+
+$transition: all 0.3s ease;
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $bg-light;
+  color: $text-dark;
+
+  &.dark-theme {
+    background-color: $bg-dark;
+    color: $text-light;
+
+    header {
+      background-color: color.adjust($bg-dark, $lightness: -5%);
+    }
+
+    .tool {
+      background-color: color.adjust($bg-dark, $lightness: 10%);
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+
+      .tool-website {
+        color: color.adjust($accent-color, $lightness: 20%);
+      }
+    }
+
+    .theme-toggle-and-dates button {
+      background-color: $secondary-color;
+      color: white;
+    }
+  }
+}
+
+header {
+  padding: 1rem 2rem;
+  background-color: $primary-color;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .theme-toggle-and-dates {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+      padding: 0.5rem 1rem;
+      background-color: $accent-color;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        background-color: color.adjust($accent-color, $lightness: -10%);
+      }
+    }
+  }
+
+  .date {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    width: 100%;
+  }
+}
+
+main {
+  padding: 2rem;
+}
+
+.tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tool {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: $transition;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 1rem;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .tool-name {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+
+  .tool-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .tool-description {
+      font-size: 0.95rem;
+      color: $secondary-color;
+    }
+
+    .tool-website {
+      align-self: flex-start;
+      text-decoration: none;
+      font-weight: bold;
+      color: $accent-color;
+      transition: $transition;
+
+      &:hover {
+        text-decoration: underline;
+        color: color.adjust($accent-color, $lightness: -10%);
+      }
+    }
+  }
+}
