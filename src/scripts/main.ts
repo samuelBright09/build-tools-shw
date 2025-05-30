@@ -32,41 +32,43 @@ if (date) {
     });
   }
 
-const getTools = async (): Promise<KTools> => {
-  const response = await fetch("../../assets/data/tools.json");
+
+  const jsonUrl: string = "../../assets/data/tools.json"
+const getTools = async (url: string = jsonUrl): Promise<KTools> => {
+  const response = await fetch(url);
   const tools = await response.json();
   return tools;
 };
 
-const renderTools = () : void => {
-  getTools()
-    .then((tools) => {
-      const toolsArray = Object.values(tools);
-      if (!toolsContainer)
-        return;
-      toolsContainer.innerHTML = "";
-      let toolCard = "";
-      toolsArray.forEach((tool) => {
-        const {  name, description, website } = tool;
-        toolCard += `<div class="tool">
-          <div>
-            <div class="img-container">
-            </div>
-            <h4 class="tool-name">${name}</h4>
+const renderTools = async () : Promise<void> => {
+  try {
+    const tools = await getTools();
+    const toolsArray = Object.values(tools);
+    if (!toolsContainer)
+      return;
+    toolsContainer.innerHTML = "";
+    let toolCard = "";
+    toolsArray.forEach((tool) => {
+      const {  name, description, website } = tool;
+      toolCard += `<div class="tool">
+        <div>
+          <div class="img-container">
           </div>
-          <div class="tool-info">
-            <p class="tool-description">${description}</p>
-            <a href=${website} target="_blank" class="tool-website">${name}</a>
-          </div>
-        </div>`;
-      });
-      toolsContainer.innerHTML = toolCard;
-    })
-    .catch((error) => {
-      console.log(error);
+          <h4 class="tool-name">${name}</h4>
+        </div>
+        <div class="tool-info">
+          <p class="tool-description">${description}</p>
+          <a href=${website} target="_blank" class="tool-website">${name}</a>
+        </div>
+      </div>`;
     });
+    toolsContainer.innerHTML = toolCard;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-renderTools()
+renderTools();
 
 
+export { renderTools, getTools };
